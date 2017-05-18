@@ -1,9 +1,7 @@
 # SimpleBlog
-It's a personal blog
+> It's a personal blog
 
-# first-blog
 
-> it's a blog
 
 ## Build Setup
 
