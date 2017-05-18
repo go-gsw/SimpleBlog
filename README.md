@@ -1,7 +1,6 @@
-# SimpleBlog
-> It's a personal blog
+# simple-blog
 
-
+> it's a simple-blog
 
 ## Build Setup
 
