@@ -18,8 +18,5 @@ export default {
   /*text-align: center;*/
   text-align: center;
   /*margin-top: 60px;*/
-  margin: 0;
-  padding: 0;
-  
 }
 </style>
