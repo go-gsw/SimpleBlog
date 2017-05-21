@@ -59,7 +59,7 @@
       <div class="container col-lg-10 col-lg-offset-1 col-xs-12 col-xs-offset-0" style="text-align:left;">
           <!-- tips:body body body!!!!!!通常是监听的body -->
           <!-- <div class="container col-lg-9" data-spy="scroll" data-target="#navbarexample" style="positoin:relative;overflow:auto;text-align:left;height:200px"> -->
-          <div class="container col-lg-9">
+          <div class="col-lg-9" id="mainContext">
 
             <div class="jumbotron col-lg-12">
               <h1>Hello, GSW!</h1>
@@ -282,7 +282,11 @@ a {
   font-weight: bold;
 }
 
-
+@media (max-width:768px) {
+  #mainContext,.container{
+    padding:0;
+  }
+}
 ul.nav-tabs{
     /*width: inherit;*/
     /*margin-top: 20px;*/
