@@ -1,62 +1,7 @@
 <template>
-  <div class="hello">
-      <div class="container col-lg-12 col-xs-12 " style="padding:0;">
-        <nav class="navbar navbar-default navbar-staric" style="background-color:#bbb;">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-scrollspy">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">G SW</a>
-            </div>
-            <div class="collapse navbar-collapse navbar-right bs-navbar-scrollspy">
-              <ul class="nav navbar-nav navbar-right" style="">
-                <li>
-                  <router-link to="/">
-                    <li class="active"><a href="">首页<!-- 添加aria-hidden="true"为了避免 屏幕识读设备抓取非故意的和可能产生混淆的输出内容 -->
-                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                    </a></li>
-                  </router-link>
-                </li>
-                <li>
-                  <router-link to="">
-                    <li class=""><a href="">GSW
-                    <span class="badge">12</span>
-                    </a></li>
-                  </router-link>
-                </li>
-                <li>
-                  <router-link to="">
-                    <li class=""><a href="">ME
-                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                    </a></li>
-                  </router-link>
-                </li>
-
-                  <li class="dropdown">
-                    <a href="#" id="navbarDrop1" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MORE  
-                    <!-- <span class="caret"></span> -->
-                    <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
-                    </a>
-                   <ul class="dropdown-menu" aria-labelledby="navbarDrop1">
-                        <li class=""><a href="">one</a></li>
-                        <li class=""><a href="">two</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li class=""><a href="">three</a></li>
-                    </ul>
-                   </li>
-                  
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-
-
-      <div class="container col-lg-10 col-lg-offset-1 col-xs-12 col-xs-offset-0" style="text-align:left;">
+  <div class="Mainleft">
+      
+      <div class="container bs-docs-container col-lg-10 col-lg-offset-1 col-xs-12 col-xs-offset-0" style="text-align:left;">
           <!-- tips:body body body!!!!!!通常是监听的body -->
           <!-- <div class="container col-lg-9" data-spy="scroll" data-target="#navbarexample" style="positoin:relative;overflow:auto;text-align:left;height:200px"> -->
           <div class="col-lg-9" id="mainContext">
@@ -180,6 +125,15 @@
           </div>
       </div>
 
+      <div class="container col-lg-10 col-lg-offset-1 col-xs-12 col-xs-offset-0" style="display:inline;">
+          <nav aria-label="pagers">
+            <ul class="pager">
+              <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Pervious</a></li>
+              <li class="next"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+            </ul>
+          </nav>
+      </div>
+
 
       <div class="container col-lg-12 col-lg-offset-0 col-xs-12 col-xs-offset-0" style="padding:20px 0 0;">
         <nav class="navbar navbar-default navbar-staric navbar-inverse" role="navigation" style="margin:0;">
@@ -242,7 +196,7 @@
 <script>
 
 export default {
-  name: 'hello',
+  name: 'Mainleft',
   data () {
     return {
       msg: ''
