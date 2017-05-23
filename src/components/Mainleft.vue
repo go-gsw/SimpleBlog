@@ -130,11 +130,11 @@
           </nav>
       </div>
 
-      <p id="back-top" style="display:block;">
+      <div id="back-top" style="display:block;">
           <a href="#">
           <span calss="badge"></span>
           </a>
-      </p>
+      </div>
 
       <div class="container col-lg-12 col-lg-offset-0 col-xs-12 col-xs-offset-0" style="padding:20px 0 0;">
         <nav class="navbar navbar-default navbar-staric navbar-inverse" role="navigation" style="margin:0;">
