@@ -110,11 +110,6 @@
                           <li><a href="#section-3">第三部分</a></li>
                           <li><a href="#section-4">第四部分</a></li>
                           <li><a href="#section-5">第五部分</a></li>
-                          <li>
-                            <a class="back-to-top" href="#">
-                              返回顶部
-                            </a>
-                          </li>
                       </ul>
                       
                       <!-- <a href="#" class="bs-docs-theme-toggle" role="button">
@@ -125,6 +120,7 @@
           </div>
       </div>
 
+
       <div class="container col-lg-10 col-lg-offset-1 col-xs-12 col-xs-offset-0" style="display:inline;">
           <nav aria-label="pagers">
             <ul class="pager">
@@ -134,6 +130,11 @@
           </nav>
       </div>
 
+      <p id="back-top" style="display:block;">
+          <a href="#">
+          <span calss="badge"></span>
+          </a>
+      </p>
 
       <div class="container col-lg-12 col-lg-offset-0 col-xs-12 col-xs-offset-0" style="padding:20px 0 0;">
         <nav class="navbar navbar-default navbar-staric navbar-inverse" role="navigation" style="margin:0;">
@@ -207,8 +208,26 @@ export default {
 //   $('#Mainspy').scrollspy({target:'#navbarexample'})
 // })
 
+$(document).ready(function() {
+  $('#back-top').hide();
+  $(function(){
+    $(window).scroll(function(){
+      if($(this).scrollTop() >100){
+         $('#back-top').fadeIn();
+      }else{
+         $('#back-top').fadeOut();
+      }
+    });
+    $('#back-top a').click(function(){
+       $('body,html').animate({
+        scrollTop:0
+       },500);
+       return false;
+    })
+  }
+  );
+});
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 *{
@@ -261,8 +280,8 @@ ul.nav-tabs li a{
 }
 ul.nav-tabs li.active a,ul.nav-tabs li a:hover{
     color: #fff;
-    background: #bbb;
-    border: 1px solid #ccc;
+    background: #ddd;
+    border: 1px solid #ddd;
 }
 ul.nav-tabs li:first-child a{
     border-radius: 4px 4px 0 0;
@@ -274,5 +293,22 @@ ul.nav-tabs.affix{
     /*width: inherit;*/
     width: 200px;
     top: 30px; /* Set the top position of pinned element */
+}
+
+#back-top{
+  display: block;
+  z-index: 10;
+  position: fixed;
+  bottom:90px;
+  right:15px;
+  background-color: #aaa;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+#back-top>a{
+  display: block;
+  width: inherit;
+  height: inherit;
 }
 </style>

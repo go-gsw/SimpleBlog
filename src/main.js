@@ -4,9 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import $ from 'jquery'
-import './assets/css/bootstrap.min.css'
-import './assets/js/bootstrap.min.js'
-
+import '../static/bootstrap/css/bootstrap.min.css'
+import '../static/bootstrap/js/bootstrap.min.js'
+import '../static/bootstrap/fonts/glyphicons-halflings-regular.eot'
 // require('bootstrap')
 Vue.config.productionTip = false
 
