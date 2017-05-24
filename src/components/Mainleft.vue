@@ -6,13 +6,13 @@
           <!-- <div class="container col-lg-9" data-spy="scroll" data-target="#navbarexample" style="positoin:relative;overflow:auto;text-align:left;height:200px"> -->
           <div class="col-lg-9" id="mainContext">
 
-            <div class="jumbotron col-lg-12">
+            <div class="jumbotron col-lg-12" id="section-1">
               <h1>Hello, GSW!</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A harum atque eaque natus consequatur exercitationem, consequuntur veritatis in cumque magnam velit distinctio libero voluptate culpa ipsam accusantium. Non, ipsa, amet.</p>
               <p><a class="btn btn-info btn-lg" href="#" role="button">Learn more</a></p>
             </div>
 
-            <h1 id="section-1">OnePart</h1>
+            <h1>OnePart</h1>
             <div class="panel panel-default" style="height: 500px;background-color:#ccc;">
               <div class="panel-heading">Title of the panel
               </div>
@@ -130,65 +130,20 @@
           </nav>
       </div>
 
-      <div id="back-top" style="display:block;">
-          <a href="#">
-          <span calss="badge"></span>
+      <div class="fixed-more-btn">
+        <div id="ToTop">
+          <a>
+          <span class="glyphicon glyphicon-chevron-up"></span>
           </a>
+        </div>
+        <div id="back-top" class="sc-only">
+            <a data-toggle="popover" title="Example popover" date-placement="right">联系
+            <!-- <span calss="glyphicon glyphicon-chevron-up"></span> -->
+            </a>
+        </div>
       </div>
 
-      <div class="container col-lg-12 col-lg-offset-0 col-xs-12 col-xs-offset-0" style="padding:20px 0 0;">
-        <nav class="navbar navbar-default navbar-staric navbar-inverse" role="navigation" style="margin:0;">
-            <div class="container-fluid">
-              <!-- Brand and toggle get grouped for better mobile display -->
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Nice! GSW</a>
-              </div>
-
-              <!-- Collect the nav links, forms, and other content for toggling -->
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                  <li class=""><a href="#">Link</a></li>
-                  <li class="dropup">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li class="divider" role="separator"></li>
-                      <li><a href="#">Separated link</a></li>
-                      <li class="divider"></li>
-                      <li><a href="#">One more separated link</a></li>
-                    </ul>
-                  </li>
-                </ul>
-                <form class="navbar-form navbar-right" role="search">
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                  </div>
-                  <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-                <ul class="nav navbar-nav navbar-right">
-                  <li class="dropup">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li class="divider"></li>
-                      <li><a href="#">Separated link</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-          </nav>
-        </div>
+      
 
   </div>
 </template>
@@ -209,19 +164,19 @@ export default {
 // })
 
 $(document).ready(function() {
-  $('#back-top').hide();
+  $('.fixed-more-btn').hide();
   $(function(){
     $(window).scroll(function(){
       if($(this).scrollTop() >100){
-         $('#back-top').fadeIn();
+         $('.fixed-more-btn').fadeIn();
       }else{
-         $('#back-top').fadeOut();
+         $('.fixed-more-btn').fadeOut();
       }
     });
-    $('#back-top a').click(function(){
+    $('#ToTop a').click(function(){
        $('body,html').animate({
         scrollTop:0
-       },500);
+       },300);
        return false;
     })
   }
@@ -294,21 +249,34 @@ ul.nav-tabs.affix{
     width: 200px;
     top: 30px; /* Set the top position of pinned element */
 }
-
+.fixed-more-btn{
+  display: block;
+  position: fixed;
+  z-index: 10;
+  width: 40px;
+  height: 80px;
+  bottom:50px;
+  right: 15px;
+}
 #back-top{
   display: block;
-  z-index: 10;
-  position: fixed;
-  bottom:90px;
-  right:15px;
-  background-color: #aaa;
-  width: 40px;
+  background-color: #bbb;
+  width: inherit;
   height: 40px;
   cursor: pointer;
 }
-#back-top>a{
+#ToTop{
+  display: block;
+  background-color: #aaa;
+  width: inherit;
+  height: 40px;
+  cursor: pointer;
+}
+#back-top>a,#ToTop>a{
   display: block;
   width: inherit;
   height: inherit;
+  padding: 10px 0;
+  text-decoration: none;
 }
 </style>
