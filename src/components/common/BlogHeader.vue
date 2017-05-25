@@ -22,7 +22,7 @@
 		            </router-link>
 		          </li>
 		          <li class="">
-		            <router-link to="">
+		            <router-link to="/PartTwo">
 		              <a href="">GSW
 		              <!-- <span class="badge">12</span> -->
 		              </a>

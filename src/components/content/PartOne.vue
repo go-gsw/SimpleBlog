@@ -1,10 +1,8 @@
 <template>
   <div class="PartOne">
-      
-      <div class="container bs-docs-container col-lg-10 col-lg-offset-1 col-xs-12 col-xs-offset-0" style="text-align:left;">
-          <!-- tips:body body body!!!!!!通常是监听的body -->
+          
           <!-- <div class="container col-lg-9" data-spy="scroll" data-target="#navbarexample" style="positoin:relative;overflow:auto;text-align:left;height:200px"> -->
-          <div class="col-lg-9" id="mainContext">
+          <!-- <div class="col-lg-9" id="mainContext"> -->
 
             <div class="jumbotron col-lg-12" id="section-1">
               <h1>Hello, GSW!</h1>
@@ -47,78 +45,6 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, temporibus voluptas natus recusandae, quo laudantium labore, assumenda quis culpa numquam molestiae expedita quam eius iure repellendus alias inventore quod, eum!</p>
               </div>
             </div>
-              
-          </div>
-          
-          <div class="col-lg-3" id="navbarexample">
-            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
-          <!-- <ul class="nav bs-docs-sidenav" style="height: 2000px;text-align:left;">
-                        
-                <li>
-                  <a href="#js-overview">概览</a>
-                  <ul class="nav">
-                  </ul>
-                </li>
-                <li><a href="#transitions">过渡效果</a></li>
-                <li class="">
-                  <a href="#modals">模态框</a>
-                  <ul class="nav">
-                    <li><a href="#modals-examples">实例</a></li>
-                    <li><a href="#modals-sizes">Sizes</a></li>
-                    <li><a href="#modals-remove-animation">Remove animation</a></li>
-                    <li class=""><a href="#modals-related-target">Varying content based on trigger button</a></li>
-                    <li class=""><a href="#modals-usage">用法</a></li>
-                    <li class=""><a href="#modals-options">参数</a></li>
-                    <li class=""><a href="#modals-methods">方法</a></li>
-                    <li class=""><a href="#modals-events">事件</a></li>
-                  </ul>
-                </li>
-                <li class="">
-                  <a href="#scrollspy">滚动监听</a>
-                  <ul class="nav">
-                    <li class=""><a href="#scrollspy-examples">实例</a></li>
-                    <li class="active"><a href="#scrollspy-usage">用法</a></li>
-                    <li><a href="#scrollspy-methods">方法</a></li>
-                    <li><a href="#scrollspy-options">参数</a></li>
-                    <li><a href="#scrollspy-events">事件</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#tabs">标签页</a>
-                  <ul class="nav">
-                    
-                  </ul>
-                </li>
-                
-                <li>
-                  <a href="#popovers">弹出框</a>
-                  <ul class="nav">
-                    
-                  </ul>
-                </li>
-                
-                <li>
-                  <a href="#buttons">按钮</a>
-                  <ul class="nav">
-                  </ul>
-                </li>
-            </ul> -->
-            <!-- 当页面加载完毕时，JS插件会搜索页面上所有[data-spy="affix"]的元素，然后找其data-offset-top或data-offset-bottom属性，即离页面顶(底)部少于多少px，就放弃固定，平时你怎么滚动，被固定的元素都定在这个位置上不动。 -->
-                      <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="90">
-                          <li class="active"><a href="#section-1">第一部分</a></li>
-                          <li><a href="#section-2">第二部分</a></li>
-                          <li><a href="#section-3">第三部分</a></li>
-                          <li><a href="#section-4">第四部分</a></li>
-                          <li><a href="#section-5">第五部分</a></li>
-                      </ul>
-                      
-                      <!-- <a href="#" class="bs-docs-theme-toggle" role="button">
-                        主题预览
-                      </a> -->
-                      
-            </nav>
-          </div>
-      </div>
 
   </div>
 </template>
@@ -141,15 +67,15 @@ export default {
 
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-*{
+<style>
+div{
   margin:0;
   padding:0;
 }
 h1, h2 {
   font-weight: normal;
   /*padding-top: 10px;*/
-  margin-top: 10px;
+  /*margin-top: 10px;*/
 }
 
 ul {
@@ -167,15 +93,11 @@ a {
   font-weight: bold;
 }
 
-@media (max-width:768px) {
-  #mainContext,.container{
-    padding:0;
-  }
-}
 ul.nav-tabs{
     /*width: inherit;*/
     /*margin-top: 20px;*/
-    width: 200px;
+    /*width: 200px;*/
+    display: block;
     background-color: #eee;
     border-radius: 4px;
     border: 1px solid #ddd;
@@ -203,7 +125,8 @@ ul.nav-tabs li:last-child a{
 }
 ul.nav-tabs.affix{
     /*width: inherit;*/
-    width: 200px;
+    /*width: 200px;*/
+    display: block;
     top: 30px; /* Set the top position of pinned element */
 }
 </style>
