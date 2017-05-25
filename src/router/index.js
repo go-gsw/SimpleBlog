@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Mainleft from '@/components/Mainleft'
+import PartOne from '@/components/content/PartOne'
 
 Vue.use(Router)
 
@@ -8,8 +8,9 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Mainleft',
-      component: Mainleft
+      // redirect:'',
+      name: 'PartOne',
+      component: PartOne
     },
     {
     	path:'',

@@ -1,5 +1,5 @@
 <template>
-  <div class="Mainleft">
+  <div class="PartOne">
       
       <div class="container bs-docs-container col-lg-10 col-lg-offset-1 col-xs-12 col-xs-offset-0" style="text-align:left;">
           <!-- tips:body body body!!!!!!通常是监听的body -->
@@ -120,31 +120,6 @@
           </div>
       </div>
 
-
-      <div class="container col-lg-10 col-lg-offset-1 col-xs-12 col-xs-offset-0" style="display:inline;">
-          <nav aria-label="pagers">
-            <ul class="pager">
-              <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Pervious</a></li>
-              <li class="next"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
-            </ul>
-          </nav>
-      </div>
-
-      <div class="fixed-more-btn">
-        <div id="ToTop">
-          <a>
-          <span class="glyphicon glyphicon-chevron-up"></span>
-          </a>
-        </div>
-        <div id="back-top" class="sc-only">
-            <a data-toggle="popover" title="Example popover" date-placement="right">联系
-            <!-- <span calss="glyphicon glyphicon-chevron-up"></span> -->
-            </a>
-        </div>
-      </div>
-
-      
-
   </div>
 </template>
 
@@ -152,7 +127,7 @@
 <script>
 
 export default {
-  name: 'Mainleft',
+  name: 'PartOne',
   data () {
     return {
       msg: ''
@@ -163,25 +138,7 @@ export default {
 //   $('#Mainspy').scrollspy({target:'#navbarexample'})
 // })
 
-$(document).ready(function() {
-  $('.fixed-more-btn').hide();
-  $(function(){
-    $(window).scroll(function(){
-      if($(this).scrollTop() >100){
-         $('.fixed-more-btn').fadeIn();
-      }else{
-         $('.fixed-more-btn').fadeOut();
-      }
-    });
-    $('#ToTop a').click(function(){
-       $('body,html').animate({
-        scrollTop:0
-       },300);
-       return false;
-    })
-  }
-  );
-});
+
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
@@ -248,35 +205,5 @@ ul.nav-tabs.affix{
     /*width: inherit;*/
     width: 200px;
     top: 30px; /* Set the top position of pinned element */
-}
-.fixed-more-btn{
-  display: block;
-  position: fixed;
-  z-index: 10;
-  width: 40px;
-  height: 80px;
-  bottom:50px;
-  right: 15px;
-}
-#back-top{
-  display: block;
-  background-color: #bbb;
-  width: inherit;
-  height: 40px;
-  cursor: pointer;
-}
-#ToTop{
-  display: block;
-  background-color: #aaa;
-  width: inherit;
-  height: 40px;
-  cursor: pointer;
-}
-#back-top>a,#ToTop>a{
-  display: block;
-  width: inherit;
-  height: inherit;
-  padding: 10px 0;
-  text-decoration: none;
 }
 </style>
