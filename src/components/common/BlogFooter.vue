@@ -15,24 +15,30 @@
     <div class="container col-lg-10 col-lg-offset-1 col-xs-12 col-xs-offset-0" style="display:inline-block;">
         <nav aria-label="pagers">
           <ul class="pager">
-            <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Pervious</a></li>
-            <li class="next"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+            <li class="previous disabled"><a href="#"><span aria-hidden="true">&laquo;</span> Pervious</a></li>
+            <li class="next"><a href="/PartTwo">Newer <span aria-hidden="true">&raquo;</span></a></li>
           </ul>
         </nav>
     </div>
 
 
     <div id="bottomFooter">
-     Copyright &copy;<a href="https://github.com/go-gsw">{{ copyright }}</a>
+     Copyright &copy;<a href="https://github.com/go-gsw">{{ msg }}&#x1F47b</a>
     </div>
   </div>
 </template>
 
 <script>
+import Emoji from 'node-emoji'
 export default {
   data () {
     return {
-      copyright: ' 2017 前端博客'
+      copyright: ' 2017 front end programmer--gsw'
+    }
+  },
+  computed:{
+    msg(){
+      return this.copyright+Emoji.get('joy')+Emoji.get('alien');
     }
   }
 }

@@ -14,27 +14,27 @@
 		      </div>
 		      <div class="collapse navbar-collapse navbar-right bs-navbar-scrollspy">
 		        <ul class="nav navbar-nav navbar-right" style="">
-		          <li class="active">
-		            <router-link to="/">
+		          <!-- <li class=""> -->
+		            <router-link to="/" active-class="active" tag="li" exact>
 		              <a href="">Search<!-- 添加aria-hidden="true"为了避免 屏幕识读设备抓取非故意的和可能产生混淆的输出内容 -->
-		              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+		              <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
 		              </a>
 		            </router-link>
-		          </li>
-		          <li class="">
-		            <router-link to="/PartTwo">
+		          <!-- </li> -->
+		          <!-- <li class=""> -->
+		            <router-link to="/PartTwo" active-class="active" tag="li" exact>
 		              <a href="">GSW
 		              <!-- <span class="badge">12</span> -->
 		              </a>
 		            </router-link>
-		          </li>
-		          <li class="">
-		            <router-link to="">
+		          <!-- </li> -->
+		          <!-- <li class=""> -->
+		            <router-link to="/PartThree" active-class="active" tag="li" exact>
 		              <a href="">ME
 		              <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
 		              </a>
 		            </router-link>
-		          </li>
+		          <!-- </li> -->
 
 		            <li class="dropdown">
 		              <a href="#" id="navbarDrop1" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MORE  
@@ -48,7 +48,9 @@
 		                  <li class=""><a href="">three</a></li>
 		              </ul>
 		             </li>
-		            
+		            <li>
+		            	<a href=""><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+		            </li>
 		        </ul>
 		      </div>
 		    </div>

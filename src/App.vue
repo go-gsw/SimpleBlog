@@ -1,15 +1,20 @@
 <template>
   <div id="app">
-    <blog-header></blog-header>
-      <div class="container bs-docs-container col-lg-10 col-lg-offset-1 col-xs-12 col-xs-offset-0" style="text-align:left;padding:0;">
-        <div class="col-lg-9" id="mainContext">
-          <router-view></router-view>
-        </div>
-        <div class="col-lg-3" id="navbarside">
-          <side-part></side-part>
-        </div>
+    <div>
+      <blog-header></blog-header>
+        <div class="container bs-docs-container col-lg-10 col-lg-offset-1 col-xs-12 col-xs-offset-0" style="text-align:left;padding:0;">
+          <div class="col-lg-9" id="mainContext">
+            <transition name="fade" mode="out-in">
+              <router-view></router-view>
+            </transition>
+          </div>
+          <div class="col-lg-3" id="navbarside">
+            <side-part></side-part>
+          </div>
+      </div>
+      <blog-footer></blog-footer>
     </div>
-    <blog-footer></blog-footer>
+    <div></div>
   </div>
 </template>
 
@@ -28,6 +33,9 @@ export default {
 </script>
 
 <style>
+*{
+  box-sizing: border-box;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -46,5 +54,19 @@ a{
   color: #666 !important;
   font-weight: bold;
 }
-
+.fade-enter-active, .fade-leave-active {
+  transition: .25s ease-out;
+}
+.fade-enter-to,.fade-leave{
+  opacity: 1;
+  visibility: visible;
+}
+.fade-leave-to{
+  opacity: .75;
+  transform: translateX(-300px);
+}
+.fade-enter{
+  opacity: .3;
+  transform: translateX(200px);
+}
 </style>
