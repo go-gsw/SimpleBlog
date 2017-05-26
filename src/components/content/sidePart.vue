@@ -81,7 +81,7 @@ ul.nav-tabs{
     /*width: inherit;*/
     /*margin-top: 20px;*/
     width: 200px;
-    /*display: block;*/
+    display: block;
     background-color: #eee;
     border-radius: 4px;
     border: 1px solid #ddd;

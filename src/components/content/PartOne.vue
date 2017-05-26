@@ -39,10 +39,10 @@
               </div>
             </div>
             
-            <div id="section-4" style="">
+            <div id="section-4">
               <h1>FourPart</h1>
               <div>
-                <div class="four" style="height: 500px;background-color:#fef;">
+                <div class="four" style="height: 500px;">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quam delectus distinctio, deserunt perspiciatis? Officiis accusamus illum assumenda quo sed, magnam, ut atque ex iusto a accusantium quibusdam non porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque laborum minus ea similique accusamus consectetur atque laboriosam, culpa, repellat dignissimos alias, debitis cupiditate iusto aliquam quam in incidunt. Expedita, necessitatibus.</p>
                 </div>
               </div>
@@ -96,6 +96,7 @@ li {
 }
 .four{
   color: #fff;
+  height: 100%;
   font-weight: normal;
   background-size: cover;
   background-image:url('../../assets/11.jpg');

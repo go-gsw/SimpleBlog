@@ -44,7 +44,9 @@ export default {
   text-align: center;
   /*margin-top: 60px;*/
 }
-
+#navbarside{
+  padding-right: 100px;
+}
 @media (max-width:768px) {
   #mainContext,.container{
     padding:0 3px 0;
