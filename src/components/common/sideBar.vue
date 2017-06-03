@@ -14,7 +14,7 @@ export default {
 		}
 	},
 	computed:{
-		isShow(){
+		isShow(){console.log(this.$store);
 			return {
 				'show-out':this.$store.getters.ischangeTools
 			}
@@ -26,7 +26,7 @@ export default {
 		// ...mapGetters(['ischangeTools'])
 	},
 	methods:{
-		showTools:function(){
+		showTools(){
 			// this.isShow=!this.isShow
 			this.$store.dispatch('changeTools')
 		}

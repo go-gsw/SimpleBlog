@@ -2,5 +2,5 @@
 // store.commit 可以提交载荷
 export default {
 	eventdone:({ commit }, param) =>commit('ADDEVENT',{item: param}),
-	changeTools:({commit})=>commit('CHANGETOOLS')
+	changeTools:({commit,state})=>commit('CHANGETOOLS')
 }

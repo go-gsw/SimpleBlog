@@ -3,6 +3,4 @@ const state ={
 	count:0,
 	isShow:true
 }
-export default {
-	state
-}
+export default state

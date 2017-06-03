@@ -69,6 +69,7 @@ export default{
 	methods:{
 		showTools(){
 			this.$store.dispatch('changeTools')
+			console.log(this.$store.changeTools)
 		}
 	}
 }
