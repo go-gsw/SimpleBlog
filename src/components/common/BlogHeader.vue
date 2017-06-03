@@ -49,7 +49,9 @@
 		              </ul>
 		             </li>
 		            <li>
-		            	<a href=""><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+		            	<a href="javascript:void(0)" @click="showTools">
+		            	<span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+		            	</a>
 		            </li>
 		        </ul>
 		      </div>
@@ -61,7 +63,14 @@
 
 <script>
 export default{
-
+	data(){
+		return {}
+	},
+	methods:{
+		showTools(){
+			this.$store.dispatch('changeTools')
+		}
+	}
 }
 </script>
 

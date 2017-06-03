@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <div>
       <blog-header></blog-header>
         <div class="container bs-docs-container col-lg-10 col-lg-offset-1 col-xs-12 col-xs-offset-0" style="text-align:left;padding:0;">
           <div class="col-lg-9" id="mainContext">
@@ -13,8 +12,7 @@
           </div>
       </div>
       <blog-footer></blog-footer>
-    </div>
-    <div></div>
+    <side-bar></side-bar>
   </div>
 </template>
 
@@ -22,12 +20,14 @@
 import BlogFooter from './components/common/BlogFooter'
 import BlogHeader from './components/common/BlogHeader'
 import sidePart from './components/content/sidePart'
+import sideBar from './components/common/sideBar'
 export default {
   name: 'app',
   components:{
     BlogFooter,
     BlogHeader,
-    sidePart
+    sidePart,
+    sideBar
   }
 }
 </script>

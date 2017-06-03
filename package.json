@@ -15,8 +15,12 @@
   "dependencies": {
     "live-server": "^1.2.0",
     "node-emoji": "^1.5.1",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.5",
+    "scss-loader": "^0.0.1",
     "vue": "^2.2.6",
-    "vue-router": "^2.3.1"
+    "vue-router": "^2.3.1",
+    "vuex": "^2.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",

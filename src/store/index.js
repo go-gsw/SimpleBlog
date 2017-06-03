@@ -1,16 +1,23 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import evnetModule from './evnetModule/index'
+import eventModule from './eventModule'
 Vue.use(Vuex)
-
+Vue.config.debug = true
 export default new Vuex.Store({
+	modules:{
+		eventModule
+	},
 	// state:{
 
 	// },
 	// mutations:{
 		
 	// }
-	modules:{
-		evnetModule
-	}
+	// getters:{
+		// ischangeTools(){
+		// let state.isShow=!state.isShow
+		// return this.state.isShow
+		// return false
+	// }
+	// }
 })
