@@ -1,6 +1,6 @@
 const state ={
 	event:[],
 	count:0,
-	isShow:true
+	isShow:false
 }
-export default state
+export default  state;

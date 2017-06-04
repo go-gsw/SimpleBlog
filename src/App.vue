@@ -65,10 +65,12 @@ a{
 }
 .fade-leave-to{
   opacity: .75;
+  transform: scale(.8,.9);
   transform: translateX(-300px);
 }
 .fade-enter{
   opacity: .3;
+  transform: scale(.7,.8);
   transform: translateX(200px);
 }
 </style>

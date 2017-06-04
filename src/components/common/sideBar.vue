@@ -1,12 +1,11 @@
 <template>
 	<div class="event-tools" :class="isShow">
-		<span @click="showTools">哈哈</span>
+		<span class="glyphicon glyphicon-align-justify" @click="showTools"></span>
 	</div>
 </template>
 
 <script>
 import {mapGetters} from 'vuex'
-// import { ischangeTools } from '../store/getters.js'
 export default {
 	data(){
 		return {
@@ -14,43 +13,53 @@ export default {
 		}
 	},
 	computed:{
-		isShow(){console.log(this.$store);
+		isShow(){
+			console.log(this.$store.getters.ischangeTools+'2');
+			console.log(this.$store)
 			return {
-				'show-out':this.$store.getters.ischangeTools
+				'show-out': this.$store.getters.ischangeTools
 			}
 		}
-		// isShow(){
-			// return this.$store.getters.ischangeTools
-			// return this.$store.state.isShow
-		// }
+		
 		// ...mapGetters(['ischangeTools'])
+		// ...mapGetters({
+		// 	isShow:'ischangeTools'
+		// })
 	},
 	methods:{
 		showTools(){
 			// this.isShow=!this.isShow
-			this.$store.dispatch('changeTools')
+			this.$store.dispatch('changetools')
 		}
 	}
 
 }
+
 </script>
 
-<style scoped lang="scss">	
+<style scoped lang="scss">
+	@media (max-width:768px){
+		$width:calc(50vw);
+	}
+	$width:300px;
+	$contentpadding:50px;
 	.event-tools{
 		display: block;
 		position: fixed;
+		z-index: 9;
 		top:0;
 		right:0;
 		bottom: 0;
-		width:300px;
+		width:$width;
 		height: 100%;
-		padding: 100px 50px 50px;
+		padding:$contentpadding;
 		box-sizing: border-box;
-		transform: translateX(300px);
+		transform: translateX($width);
 		transition: all .3s;
 		background-color: #ccc;
 		&.show-out{
-			transform: translateX(0)
+			transform: translateX(0);
+			box-shadow: -5px 0 10px #aaa;
 		}
 	}
 </style>

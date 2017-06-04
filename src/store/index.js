@@ -1,23 +1,33 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import eventModule from './eventModule'
+import eventModule from './eventModule/index'
+import * as type from './eventModule/mutations_types.js'
 Vue.use(Vuex)
 Vue.config.debug = true
 export default new Vuex.Store({
 	modules:{
-		eventModule
+		eM:eventModule
 	},
 	// state:{
-
+	// 	event:[],
+	// 	count:0,
+	// 	isShow:false
 	// },
 	// mutations:{
-		
-	// }
+	// 	[type.CHANGETOOLS](state){
+	// 		state.isShow=!state.isShow
+	// 		console.log(state.isShow+'1')
+	// 	}
+	// },
 	// getters:{
-		// ischangeTools(){
-		// let state.isShow=!state.isShow
-		// return this.state.isShow
-		// return false
-	// }
+	// 	ischangeTools:state=>{
+	// 	// return state.eventModule.isShow
+	// 	// return this.$store.state.isShow
+	// 	// return false
+	// 	return state.isShow
+	// 	}
+	// },
+	// actions:{
+	// 	changetools({commit}){commit('CHANGETOOLS')}
 	// }
 })

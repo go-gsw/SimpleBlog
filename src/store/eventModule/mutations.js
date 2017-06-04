@@ -2,7 +2,7 @@
  *Created by gongsw  on 2017/6/3
  */
 //在这里引用所有mutation类型
-import * as type from './mutations_types'
+import * as type from './mutations_types.js'
 // import 
 
 export default {

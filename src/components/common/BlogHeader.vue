@@ -16,7 +16,7 @@
 		        <ul class="nav navbar-nav navbar-right" style="">
 		          <!-- <li class=""> -->
 		            <router-link to="/" active-class="active" tag="li" exact>
-		              <a href="">Search<!-- 添加aria-hidden="true"为了避免 屏幕识读设备抓取非故意的和可能产生混淆的输出内容 -->
+		              <a href="">Main<!-- 添加aria-hidden="true"为了避免 屏幕识读设备抓取非故意的和可能产生混淆的输出内容 -->
 		              <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
 		              </a>
 		            </router-link>
@@ -39,7 +39,7 @@
 		            <li class="dropdown">
 		              <a href="#" id="navbarDrop1" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MORE  
 		              <!-- <span class="caret"></span> -->
-		              <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+		              <!-- <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span> -->
 		              </a>
 		             <ul class="dropdown-menu" aria-labelledby="navbarDrop1">
 		                  <li class=""><a href="">one</a></li>
@@ -49,9 +49,7 @@
 		              </ul>
 		             </li>
 		            <li>
-		            	<a href="javascript:void(0)" @click="showTools">
-		            	<span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
-		            	</a>
+		            	<a @click="showTools"><span class="glyphicon glyphicon-align-justify toggleShow" aria-hidden="true"></span></a>
 		            </li>
 		        </ul>
 		      </div>
@@ -62,19 +60,25 @@
 </template>
 
 <script>
+import {mapActions} from 'vuex'
 export default{
 	data(){
 		return {}
 	},
 	methods:{
 		showTools(){
-			this.$store.dispatch('changeTools')
-			console.log(this.$store.changeTools)
+			this.$store.dispatch('changetools')
+			// console.log(this.$store.changeTools)
 		}
+		// ...mapActions({
+		// 	showTools:'changetools'
+		// })
 	}
 }
 </script>
 
 <style>
-	
+	.toggleShow{
+		z-index: 10;
+	}
 </style>
