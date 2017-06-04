@@ -7,7 +7,8 @@
         </a>
       </div>
       <div id="mailTo" class="sc-only">
-          <a data-toggle="popover" title="Example popover" date-placement="right">联系
+          <a data-toggle="popover" title="Example popover" date-placement="right">
+          <span class="glyphicon glyphicon-mail"></span>
           </a>
       </div>
     </div>

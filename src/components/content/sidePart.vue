@@ -5,7 +5,7 @@
 		  <!-- tips:body body body!!!!!!滚动监听通常是监听的body -->
 		  <!-- 当页面加载完毕时，JS插件会搜索页面上所有[data-spy="affix"]的元素，然后找其data-offset-top或data-offset-bottom属性，即离页面顶(底)部少于多少px，就放弃固定，平时你怎么滚动，被固定的元素都定在这个位置上不动。 -->
 		            <ul class="nav nav-tabs nav-stacked bs-docs-sidenav" data-spy="affix" data-offset-top="90">
-		                <li class="active">
+		                <!-- <li class="active">
 			                <a href="#section-1">第一部分 
 				                <span class="badge">3</span>
 			                </a>
@@ -17,7 +17,8 @@
 				                <span class="badge">15</span>
 			                </a>
 		                </li>
-		                <li><a href="#section-5">第五部分</a></li>
+		                <li><a href="#section-5">第五部分</a></li> -->
+		                <li v-for="item in sideBarList" v-text="item.context"></li>
 		            </ul>
 		            
 		            <!-- <a href="#" class="bs-docs-theme-toggle" role="button">
@@ -34,8 +35,12 @@ export default{
 		return{
 			sideBarList:[
 				{
-					title:one,
-					
+					title:'one',
+					context:'第一部分'
+				},
+				{
+					titile:'two',
+					context:'第二部分'
 				}
 			]
 		}

@@ -83,7 +83,9 @@ h1{
   margin:0 !important;
   padding:10px 0;
 }
-
+p{
+  font-family: Pacifico,cursive;
+}
 ul {
   list-style-type: none;
   padding: 0;
