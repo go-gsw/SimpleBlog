@@ -14,8 +14,8 @@ export default {
 	},
 	computed:{
 		isShow(){
-			console.log(this.$store.getters.ischangeTools+'2');
-			console.log(this.$store)
+			// console.log(this.$store.getters.ischangeTools+'2');
+			// console.log(this.$store)
 			return {
 				'show-out': this.$store.getters.ischangeTools
 			}
@@ -28,7 +28,6 @@ export default {
 	},
 	methods:{
 		showTools(){
-			// this.isShow=!this.isShow
 			this.$store.dispatch('changetools')
 		}
 	}
@@ -38,19 +37,28 @@ export default {
 </script>
 
 <style scoped lang="scss">
-	@media (max-width:768px){
-		$width:calc(50vw);
-	}
 	$width:300px;
+	$minwidth:100px;
 	$contentpadding:50px;
+	$boxshadow:5px;
+	@media (max-width:768px){
+		$width:100px;
+		$contentpadding:20px;
+		$boxshadow:2px;
+	}
+	// @mixin 
 	.event-tools{
 		display: block;
 		position: fixed;
+		cursor:pointer;
 		z-index: 9;
 		top:0;
 		right:0;
 		bottom: 0;
 		width:$width;
+		// @media (max-width:768px){
+		// 	width:$minwidth;
+		// }
 		height: 100%;
 		padding:$contentpadding;
 		box-sizing: border-box;
@@ -59,7 +67,7 @@ export default {
 		background-color: #ccc;
 		&.show-out{
 			transform: translateX(0);
-			box-shadow: -5px 0 10px #aaa;
+			box-shadow: -$boxshadow 0 $boxshadow*2 #aaa;
 		}
 	}
 </style>

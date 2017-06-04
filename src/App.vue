@@ -4,7 +4,7 @@
         <div class="container bs-docs-container col-lg-10 col-lg-offset-1 col-xs-12 col-xs-offset-0" style="text-align:left;padding:0;">
           <div class="col-lg-9" id="mainContext">
             <transition name="fade" mode="out-in">
-              <router-view></router-view>
+              <router-view class="content"></router-view>
             </transition>
           </div>
           <div class="col-lg-3" id="navbarside">
@@ -44,8 +44,11 @@ export default {
   text-align: center;
   /*margin-top: 60px;*/
 }
-#navbarside{
+/*#navbarside{
   padding-right: 100px;
+}*/
+.content{
+  box-shadow: 5px 3px 10px #ccc;
 }
 @media (max-width:768px) {
   #mainContext,.container{

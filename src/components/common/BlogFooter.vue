@@ -6,7 +6,7 @@
         <span class="glyphicon glyphicon-chevron-up"></span>
         </a>
       </div>
-      <div id="back-top" class="sc-only">
+      <div id="mailTo" class="sc-only">
           <a data-toggle="popover" title="Example popover" date-placement="right">联系
           </a>
       </div>
@@ -84,22 +84,23 @@ $(document).ready(function() {
   height: 80px;
   bottom:100px;
   right: 15px;
+  border-radius:10px;
 }
-#back-top{
+#mailTo{
   display: block;
-  background-color: #bbb;
+  background-color: #ddd;
   width: inherit;
   height: 40px;
   cursor: pointer;
 }
 #ToTop{
   display: block;
-  background-color: #aaa;
+  background-color: #ccc;
   width: inherit;
   height: 40px;
   cursor: pointer;
 }
-#back-top>a,#ToTop>a{
+#mailTo>a,#ToTop>a{
   display: block;
   width: inherit;
   height: inherit;
