@@ -49,7 +49,7 @@
 		              </ul>
 		             </li> -->
 		            <li>
-		            	<a @click="showTools"><span class="glyphicon glyphicon-align-justify toggleShow" aria-hidden="true" :style="rotateSpan" style="transition:all .4s"></span></a>
+		            	<a @click="showTools"><span class="glyphicon glyphicon-align-justify toggleShow" aria-hidden="true" :style="rotateSpan" style="transition:transform .4s"></span></a>
 		            </li>
 		        </ul>
 		      </div>

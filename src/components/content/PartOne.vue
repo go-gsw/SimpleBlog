@@ -83,7 +83,7 @@ export default {
 
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style scoped>
 h1{
   margin:0 !important;
   padding:10px 0;

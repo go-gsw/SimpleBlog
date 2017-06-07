@@ -6,11 +6,11 @@
         <span class="glyphicon glyphicon-chevron-up"></span>
         </a>
       </div>
-      <div id="mailTo" class="sc-only">
+      <!-- <div id="mailTo" class="sc-only">
           <a data-toggle="popover" title="Example popover" date-placement="right">
           <span class="glyphicon glyphicon-mail"></span>
           </a>
-      </div>
+      </div> -->
     </div>
 
     <div class="container col-lg-10 col-lg-offset-1 col-xs-12 col-xs-offset-0" style="display:inline-block;">
@@ -43,7 +43,8 @@ export default {
     }
   }
 }
-jQuery.extend(jQuery.easing,{
+//定义jquery的animate的运动类型
+/*jQuery.extend(jQuery.easing,{
   easeOutBounce: function (x, t, b, c, d) { 
       if ((t/=d) < (1/2.75)) { 
         return c*(7.5625*t*t) + b; 
@@ -55,12 +56,12 @@ jQuery.extend(jQuery.easing,{
         return c*(7.5625*(t-=(2.625/2.75))*t + .984375) + b; 
       } 
     }
-});
+});*/
 $(document).ready(function() {
   $('.fixed-more-btn').hide();
   $(function(){
     $(window).scroll(function(){
-      if($(this).scrollTop() >100){
+      if($(this).scrollTop() >150){
          $('.fixed-more-btn').fadeIn();
       }else{
          $('.fixed-more-btn').fadeOut();
@@ -69,7 +70,7 @@ $(document).ready(function() {
     $('#ToTop a').click(function(){
        $('body,html').animate({
         scrollTop:0
-       },1500,'easeOutBounce');
+       },400,'swing');
        return false;
     })
   }
@@ -95,8 +96,8 @@ $(document).ready(function() {
   z-index: 10;
   width: 40px;
   height: 80px;
-  bottom:100px;
-  right: 15px;
+  bottom:140px;
+  right: 100px;
   border-radius:10px;
 }
 #mailTo{
@@ -108,7 +109,7 @@ $(document).ready(function() {
 }
 #ToTop{
   display: block;
-  background-color: #ccc;
+  background-color: #ddd;
   width: inherit;
   height: 40px;
   cursor: pointer;
