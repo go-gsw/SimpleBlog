@@ -49,7 +49,7 @@
 		              </ul>
 		             </li> -->
 		            <li>
-		            	<a @click="showTools"><span class="glyphicon glyphicon-align-justify toggleShow" aria-hidden="true" :style="rotateSpan"></span></a>
+		            	<a @click="showTools"><span class="glyphicon glyphicon-align-justify toggleShow" aria-hidden="true" :style="rotateSpan" style="transition:all .4s"></span></a>
 		            </li>
 		        </ul>
 		      </div>
@@ -76,7 +76,7 @@ export default{
 	},
 	computed:{
 		rotateSpan(){
-			return this.$store.getters.ischangeTools?'transform:rotate(90deg)':'';
+			return this.$store.getters.ischangeTools?'transform:rotate(90deg)':'transform:rotate(0deg)';
 		}
 	}
 }

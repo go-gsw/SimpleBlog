@@ -23,7 +23,12 @@
             
             <div id="section-2">
               <h1>TwoPart</h1>
-              <div>
+              <div id="section-2-part1">
+                <div class="" style="height: 500px;background-color:#ddd;">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aut adipisci a dolore reiciendis fuga facere delectus velit totam minima, laboriosam atque nulla inventore, consequuntur amet quidem in ullam ipsa.</p>
+                </div>
+              </div>
+              <div id="section-2-part2">
                 <div class="" style="height: 500px;background-color:#ddd;">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aut adipisci a dolore reiciendis fuga facere delectus velit totam minima, laboriosam atque nulla inventore, consequuntur amet quidem in ullam ipsa.</p>
                 </div>
