@@ -36,10 +36,10 @@
 		            </router-link>
 		          <!-- </li> -->
 
-		            <li class="dropdown">
+		            <!-- <li class="dropdown">
 		              <a href="#" id="navbarDrop1" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MORE  
-		              <!-- <span class="caret"></span> -->
-		              <!-- <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span> -->
+		              <span class="caret"></span>
+		              <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
 		              </a>
 		             <ul class="dropdown-menu" aria-labelledby="navbarDrop1">
 		                  <li class=""><a href="">one</a></li>
@@ -47,9 +47,9 @@
 		                  <li role="separator" class="divider"></li>
 		                  <li class=""><a href="">three</a></li>
 		              </ul>
-		             </li>
+		             </li> -->
 		            <li>
-		            	<a @click="showTools"><span class="glyphicon glyphicon-align-justify toggleShow" aria-hidden="true"></span></a>
+		            	<a @click="showTools"><span class="glyphicon glyphicon-align-justify toggleShow" aria-hidden="true" :style="rotateSpan"></span></a>
 		            </li>
 		        </ul>
 		      </div>
@@ -73,6 +73,11 @@ export default{
 		// ...mapActions({
 		// 	showTools:'changetools'
 		// })
+	},
+	computed:{
+		rotateSpan(){
+			return this.$store.getters.ischangeTools?'transform:rotate(90deg)':'';
+		}
 	}
 }
 </script>

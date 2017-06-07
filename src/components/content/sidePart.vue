@@ -1,6 +1,7 @@
 <template>
 	<div class="sidePart">
 		  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
+		  <h2><span class="glyphicon glyphicon-list-alt"></span> 最近列表</h2>
 
 		  <!-- tips:body body body!!!!!!滚动监听通常是监听的body -->
 		  <!-- 当页面加载完毕时，JS插件会搜索页面上所有[data-spy="affix"]的元素，然后找其data-offset-top或data-offset-bottom属性，即离页面顶(底)部少于多少px，就放弃固定，平时你怎么滚动，被固定的元素都定在这个位置上不动。 -->
