@@ -18,7 +18,7 @@
 			                </a>
 		                </li>
 		                <li><a href="#section-5">第五部分</a></li> -->
-		                <li v-for="item in sideBarList" v-text="item.context"></li>
+		                <li v-for="item in sideBarList"><a :href="item.anchor">{{item.context}}</a></li>
 		            </ul>
 		            
 		            <!-- <a href="#" class="bs-docs-theme-toggle" role="button">
@@ -33,26 +33,17 @@
 export default{
 	data(){
 		return{
-			sideBarList:[
-				{
-					title:'one',
-					context:'第一部分'
-				},
-				{
-					titile:'two',
-					context:'第二部分'
-				},
-				{
-					titile:'three',
-					context:'第三部分'
-				},
-				{
-					titile:'four',
-					context:'第四部分'
-				}
-			]
+	 
 		}
 	},
+	methods:{
+
+	},
+	computed:{
+		sideBarList(){
+			return this.$store.getters.getsidebar
+		}
+	}
 }
 </script>
 <style scoped>

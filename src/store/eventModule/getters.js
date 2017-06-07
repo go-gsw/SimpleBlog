@@ -11,6 +11,9 @@ const getters ={
 		// return false
 		return state.isShow
 	},
+	getsidebar:state=>{
+		return state.sideBarList
+	},
 	//通过 rootState，模块中的 getters 就可以引用别的模块中的 state
 	xxx:(state,getters,rootState)=>{
 		return{}
