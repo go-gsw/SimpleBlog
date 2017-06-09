@@ -6,4 +6,6 @@
 //使用常量替代 Mutation 事件类型
 //一般大写
 export const ADDEVENT = 'ADDEVENT';
-export const CHANGETOOLS = 'CHANGETOOLS'
+export const CHANGETOOLS = 'CHANGETOOLS';
+export const CHANGELIKE = 'CHANGELIKE';
+export const INCLIKES ='INCLIKES';

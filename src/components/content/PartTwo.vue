@@ -1,6 +1,6 @@
 <template>
 	<div class='PartTwo'>
-		<!-- <div id="testTwo"></div> -->
+		<div id="testTwo"></div>
 	</div>
 </template>
 

@@ -4,10 +4,15 @@ const getters ={
 	// 		return{}
 	// 	})
 	// },
+	
+	numOflikes:state=>{
+		return state.likes
+	},
+	islike:state=>{
+		return state.thisIslike
+	},
 	ischangeTools:state=>{
 		// console.log(state.isShow+'3')
-		// let isShownow=this.state.isShow
-		// return isShownow
 		// return false
 		return state.isShow
 	},

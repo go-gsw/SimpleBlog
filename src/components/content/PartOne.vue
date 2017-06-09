@@ -13,7 +13,20 @@
               
               <h1>OnePart</h1>
               <div class="panel panel-default" style="background-color:#ccc;">
-                <div class="panel-heading">Title of the panel.
+                <div class="panel-heading"><span>Title of the panel.</span>
+                  <div class="right">
+                    <ul style="margin:0">
+                      <li class="item like" style="display:table-cell;vertical-align:middle;height:20px;border:1px solid #ccc;padding:0 8px;text-decoration: none;border-radius:3px;cursor: pointer;" @click="incLikes">
+                        <a style="text-decoration: none;">
+                          <img data-v-34a213f3="" src="http://gold-cdn.xitu.io/v3/static/img/like.4bf00fb.svg" class="icon">
+                          <span style="display:inline-block;height:20px;line-height:20px;font-size:12px;" :style="changelikecolor">245</span>
+                        </a>
+                      </li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
                 </div>
                 <div class="panel-body" style="box-sizing:border-box;padding:0">
                   <img src="../../assets/14.jpg" alt="图片集" style="width:100%;height:100%">
@@ -74,12 +87,19 @@ export default {
     return {
       msg: ''
     }
+  },
+  methods:{
+    incLikes(){
+      this.$store.dispatch('changelike'),
+      this.$store.dispatch('incLikes')
+    },
+  },
+  computed:{
+    changelikecolor(){
+      return this.$store.getters.islike?'color:red':'color:#ccc'
+    }
   }
 }
-// $(function(){
-//   $('#Mainspy').scrollspy({target:'#navbarexample'})
-// })
-
 
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->

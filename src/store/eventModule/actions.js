@@ -3,7 +3,9 @@
 export default {
 	eventdone:({ commit }, param) =>commit('ADDEVENT',{item: param}),
 	// changetools:({commit,rootState})=>commit('CHANGETOOLS'rootState.isShow),
-	changetools({commit}){commit('CHANGETOOLS')}
+	changetools({commit}){commit('CHANGETOOLS')},
+	changelike({commit}){commit('CHANGELIKE')},
+	incLikes({commit}){commit('INCLIKES')}
 }
 
 

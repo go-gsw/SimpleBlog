@@ -12,5 +12,11 @@ export default {
 	},
 	[type.CHANGETOOLS](state){
 		state.isShow=!state.isShow
+	},
+	[type.INCLIKES](state){
+		state.thisIslike?state.likes+=1:state.likes-=1
+	},
+	[type.CHANGELIKE](state){
+		state.thisIslike=!state.thisIslike
 	}
 }
