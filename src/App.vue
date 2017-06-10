@@ -13,12 +13,12 @@
       </div>
       <blog-footer></blog-footer>
     <side-bar></side-bar>
-    <div class="signindialog" v-if="showsign" key="show">
-      <div class="signin">
-        <log-in></log-in>
+      <div class="signindialog" v-if="showsign" key="show">
+        <div class="signin">
+          <log-in></log-in>
+        </div>
+        <div class="signin-overlay" @click="notshowsign"></div>
       </div>
-      <div class="signin-overlay" @click="notshowsign"></div>
-    </div>
   </div>
 </template>
 
@@ -78,7 +78,7 @@ export default {
   padding-right: 100px;
 }*/
 .content{
-  box-shadow: 5px 3px 10px #ccc;
+  box-shadow: 3px 3px 10px #ccc;
 }
 @media (max-width:768px) {
   #mainContext,.container{
@@ -126,13 +126,19 @@ a{
   opacity: .95;
   z-index: 201;
 }
+.signin .showsign{
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  transition: all .4 ease-in;
+}
 .signin-overlay{
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.4);
   z-index: 200;
 }
 </style>
