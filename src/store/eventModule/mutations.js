@@ -18,5 +18,12 @@ export default {
 	},
 	[type.CHANGELIKE](state){
 		state.thisIslike=!state.thisIslike
+	},
+	[type.CHANGELOG](state,obj){
+		obj.showsignin=!obj.showsignin
+		
+	},
+	[type.HADCHANGELOG](state,obj){
+		obj.loged=!obj.loged
 	}
 }

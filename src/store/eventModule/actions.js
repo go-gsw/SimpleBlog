@@ -5,7 +5,9 @@ export default {
 	// changetools:({commit,rootState})=>commit('CHANGETOOLS'rootState.isShow),
 	changetools({commit}){commit('CHANGETOOLS')},
 	changelike({commit}){commit('CHANGELIKE')},
-	incLikes({commit}){commit('INCLIKES')}
+	incLikes({commit}){commit('INCLIKES')},
+	ishadlogin({commit,rootState}){commit('CHANGELOG',rootState)},
+	hadlogin({commit,rootState}){commit('HADCHANGELOG',rootState)}
 }
 
 

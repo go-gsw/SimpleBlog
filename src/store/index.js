@@ -9,6 +9,10 @@ export default new Vuex.Store({
 	modules:{
 		eM:eventModule
 	},
+	state:{
+		showsignin:false,
+		loged:false
+	}
 	// state:{
 	// 	event:[],
 	// 	count:0,

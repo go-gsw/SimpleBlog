@@ -48,7 +48,7 @@
 		                  <li class=""><a href="">three</a></li>
 		              </ul>
 		             </li> -->
-		            <li>
+		            <li v-if='haslogin'>
 		            	<a @click="showTools"><span class="glyphicon glyphicon-align-justify toggleShow" aria-hidden="true" :style="rotateSpan" style="transition:transform .4s"></span></a>
 		            </li>
 		        </ul>
@@ -75,6 +75,9 @@ export default{
 		// })
 	},
 	computed:{
+		haslogin(){
+			return this.$store.state.loged
+		},
 		rotateSpan(){
 			return this.$store.getters.ischangeTools?'transform:rotate(90deg)':'transform:rotate(0deg)';
 		}

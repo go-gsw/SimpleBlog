@@ -13,6 +13,12 @@
       </div>
       <blog-footer></blog-footer>
     <side-bar></side-bar>
+    <div class="signindialog" v-if="showsign" key="show">
+      <div class="signin">
+        <log-in></log-in>
+      </div>
+      <div class="signin-overlay" @click="notshowsign"></div>
+    </div>
   </div>
 </template>
 
@@ -21,14 +27,38 @@ import BlogFooter from './components/common/BlogFooter'
 import BlogHeader from './components/common/BlogHeader'
 import sidePart from './components/content/sidePart'
 import sideBar from './components/common/sideBar'
+import logIn from './components/content/login'
+import { mapState } from 'vuex'
 export default {
   name: 'app',
   components:{
     BlogFooter,
     BlogHeader,
     sidePart,
-    sideBar
-  }
+    sideBar,
+    logIn
+  },
+  data(){
+    return{
+    }
+  },
+  methods:{
+    notshowsign(){
+      this.$store.dispatch('ishadlogin')
+    },
+  },
+  watch:{
+    
+  },
+  computed:mapState({
+    showsign(state){
+        // return this.$store.getters.getshowsign
+        return this.$store.state.showsignin
+        // return  true
+    },
+
+  })
+  
 }
 </script>
 
@@ -75,5 +105,34 @@ a{
   opacity: .3;
   transform: scale(.7,.8);
   transform: translateX(200px);
+}
+.signindialog{
+  text-align: left;
+  color: #fff;
+}
+.signin{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  /*height: 200px;*/
+  padding: 10px 20px;
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 5px;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  /*visibility: hidden;*/
+  opacity: .95;
+  z-index: 201;
+}
+.signin-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 200;
 }
 </style>

@@ -8,7 +8,7 @@
               <div class="jumbotron col-lg-12">
                 <h1>Hello, GSW! 最新博客 :)&#x1F47b &#x1f64f</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A harum atque eaque natus consequatur exercitationem, consequuntur veritatis in cumque magnam velit distinctio libero voluptate culpa ipsam accusantium. Non, ipsa, amet.</p>
-                <p><a class="btn btn-info btn-lg" href="#" role="button">Learn more</a></p>
+                <p><a class="btn btn-info btn-lg"  role="button" @click="showsignin">Learn more</a></p>
               </div>
               
               <h1>OnePart</h1>
@@ -93,6 +93,9 @@ export default {
       this.$store.dispatch('changelike'),
       this.$store.dispatch('incLikes')
     },
+    showsignin(){
+      this.$store.dispatch('ishadlogin')
+    }
   },
   computed:{
     changelikecolor(){

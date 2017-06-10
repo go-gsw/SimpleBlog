@@ -4,7 +4,13 @@ const getters ={
 	// 		return{}
 	// 	})
 	// },
-	
+	/*getshowsign:(state,getters,rootState)=>{
+		console.log(rootState.showsignin+'rel')
+		return	rootState.showsignin
+	},*/
+	getshowsign:state=>{
+		return state.showsignin
+	},
 	numOflikes:state=>{
 		return state.likes
 	},
