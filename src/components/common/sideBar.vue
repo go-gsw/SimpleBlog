@@ -1,6 +1,12 @@
 <template>
 	<div class="event-tools" :class="isShow">
-		<span class="glyphicon glyphicon-align-justify" @click="showTools"></span>
+		<!-- <span class="glyphicon glyphicon-align-justify" @click="showTools"></span> -->
+		<div class="userImg">
+			
+		</div>
+		<h2>{{Name}}</h2>
+		<span>游客</span>
+		<div class="signout" @click="signout">Sign out</div>
 	</div>
 </template>
 
@@ -19,6 +25,9 @@ export default {
 			return {
 				'show-out': this.$store.getters.ischangeTools
 			}
+		},
+		Name(){
+			return localStorage.getItem('ms_username')||'[]'
 		}
 		
 		// ...mapGetters(['ischangeTools'])
@@ -29,6 +38,10 @@ export default {
 	methods:{
 		showTools(){
 			this.$store.dispatch('changetools')
+		},
+		signout(){
+			this.$store.dispatch('changetools')
+			localStorage.removeItem('ms_username')
 		}
 	}
 
@@ -51,7 +64,7 @@ export default {
 		display: block;
 		position: fixed;
 		cursor:pointer;
-		z-index: 9;
+		z-index: 11;
 		top:0;
 		right:0;
 		bottom: 0;
@@ -69,5 +82,25 @@ export default {
 			transform: translateX(0);
 			box-shadow: -$boxshadow 0 $boxshadow*2 #aaa;
 		}
+	}
+	.userImg{
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		background-color:#aaa;
+		display: inline-block;
+	}
+
+	.signout{
+		width: 80px;
+		height: 30px;
+		line-height: 30px;
+		margin: auto;
+		left: 0;
+		right: 0;
+		background-color: #bbb;
+		position:absolute;
+		// display: block;
+		bottom:50px;
 	}
 </style>

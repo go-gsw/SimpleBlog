@@ -12,7 +12,7 @@
           </div>
       </div>
       <blog-footer></blog-footer>
-    <side-bar></side-bar>
+      <side-bar></side-bar>
       <div class="signindialog" v-if="showsign" key="show">
         <div class="signin">
           <log-in></log-in>

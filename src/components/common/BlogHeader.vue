@@ -88,6 +88,6 @@ export default{
 <style>
 	.toggleShow{
 		cursor: pointer;
-		z-index: 10;
+		z-index: 20;
 	}
 </style>
