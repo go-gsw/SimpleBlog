@@ -8,8 +8,8 @@
               <div class="jumbotron col-lg-12">
                 <h1>Hello, GSW! 最新博客 :)&#x1F47b &#x1f64f</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A harum atque eaque natus consequatur exercitationem, consequuntur veritatis in cumque magnam velit distinctio libero voluptate culpa ipsam accusantium. Non, ipsa, amet.</p>
-                <p><a class="btn btn-info btn-lg"  role="button" @click="showsignin">Learn more</a><small>Need sign in!</small></p>
-                
+                <div><a class="btn btn-info btn-lg"  role="button" @click="showsignin">Learn more</a></div>
+                <small :style="showSmall" style="font-family:Arial, sans-serif;">   Need sign in!</small>
               </div>
               
               <h1>OnePart</h1>
@@ -101,6 +101,9 @@ export default {
   computed:{
     changelikecolor(){
       return this.$store.getters.islike?'color:red':'color:#ccc'
+    },
+    showSmall(){
+      return this.$store.getters.ischangeTools?'display:none':'display:inline-block'
     }
   }
 }

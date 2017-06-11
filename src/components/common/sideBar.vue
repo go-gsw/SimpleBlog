@@ -4,7 +4,7 @@
 		<div class="userImg">
 			
 		</div>
-		<h2>{{Name}}</h2>
+		<div class="h2" style="text-overflow: ellipsis;">{{Name}}</div>
 		<span>游客</span>
 		<div class="signout" @click="signout">Sign out</div>
 	</div>
