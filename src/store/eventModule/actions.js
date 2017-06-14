@@ -7,6 +7,7 @@ export default {
 	changelike({commit}){commit('CHANGELIKE')},
 	incLikes({commit}){commit('INCLIKES')},
 	ishadlogin({commit,rootState}){commit('CHANGELOG',rootState)},
+	cancellogin({commit,rootState}){commit('CANCELLOGIN',rootState)},
 	hadlogin({commit,rootState}){commit('HADCHANGELOG',rootState)}
 }
 

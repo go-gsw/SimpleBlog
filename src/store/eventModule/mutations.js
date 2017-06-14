@@ -20,10 +20,24 @@ export default {
 		state.thisIslike=!state.thisIslike
 	},
 	[type.CHANGELOG](state,obj){
-		obj.showsignin=!obj.showsignin
-		
+		// obj.showsignin=!obj.showsignin;
+		if(obj.showsignin){
+			obj.showsignin
+			obj.loged=false
+		}else{
+			obj.showsignin=!obj.showsignin;
+		}
+	},
+	[type.CANCELLOGIN](state,obj){
+		obj.showsignin=!obj.showsignin;
 	},
 	[type.HADCHANGELOG](state,obj){
 		obj.loged=!obj.loged
+		if(obj.loged){
+			obj.loged
+			obj.showsignin=false
+		}else{
+			obj.loged=!obj.loged
+		}
 	}
 }

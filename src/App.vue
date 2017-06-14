@@ -44,7 +44,7 @@ export default {
   },
   methods:{
     notshowsign(){
-      this.$store.dispatch('ishadlogin')
+      this.$store.dispatch('cancellogin')
     },
   },
   watch:{
