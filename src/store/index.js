@@ -11,7 +11,14 @@ export default new Vuex.Store({
 	},
 	state:{
 		showsignin:false,
-		loged:false
+		loged:false,
+		domain:'http://baidu.com',
+		userInfo:{
+			name:"",
+			age:"",
+			male:"",
+			icon:""
+		}
 	}
 	// state:{
 	// 	event:[],

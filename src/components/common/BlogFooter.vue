@@ -100,6 +100,18 @@ $(document).ready(function() {
   right: 100px;
   border-radius:10px;
 }
+@media (max-width:768px){
+    .fixed-more-btn{
+      display: block;
+      position: fixed;
+      z-index: 10;
+      width: 40px;
+      height: 80px;
+      bottom:40px;
+      right: 20px;
+      border-radius:10px;
+    }
+}
 #mailTo{
   display: block;
   background-color: #ddd;

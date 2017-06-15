@@ -2,7 +2,6 @@ const state ={
 	event:[],
 	count:0,
 	thisIslike:false,
-	// showsignin:false,
 	likes:5355,
 	isShow:false,
 	sideBarList:[

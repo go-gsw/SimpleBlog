@@ -42,7 +42,9 @@
                 return false;
             }
         });*/
-
+        // this.$cookie.set('session','SignInfo',{expires:1,path:'/',domain:'baidu.com',secure:true})
+        let SignInfo=this.logform.useremail
+        this.$cookie.set('session','SignInfo',{expires:1})
         localStorage.setItem('ms_username',this.logform.useremail);
       }
     },

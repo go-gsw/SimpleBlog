@@ -5,17 +5,45 @@
 			
 		</div>
 		<div class="h2" style="text-overflow: ellipsis;">{{Name}}</div>
-		<span>游客</span>
+		<!-- <span>{{userInfo.name}}</span> -->
 		<div class="signout" @click="signout">Sign out</div>
 	</div>
 </template>
 
 <script>
+import axios from 'axios'
 import {mapGetters} from 'vuex'
 export default {
 	data(){
 		return {
 			// isShow:false
+		}
+	},
+	mounted(){
+		this.getUserInfo()
+	},
+	methods:{
+		getUserInfo(){
+			this.userInfo={
+				name:"gsw",
+				age:"21",
+				male:"male",
+				icon:""
+			};
+			axios.get('',{'params':this.userInfo}).then((res)=>{
+
+				
+			}).catch(err=>{
+				console.log(err)
+			})
+		},
+		showTools(){
+			this.$store.dispatch('changetools')
+		},
+		signout(){
+			this.$store.dispatch('changetools')
+			this.$store.dispatch('Signout')
+			localStorage.removeItem('ms_username')
 		}
 	},
 	computed:{
@@ -27,22 +55,15 @@ export default {
 			}
 		},
 		Name(){
-			return localStorage.getItem('ms_username')||'[]'
+			// return localStorage.getItem('ms_username')||'账号'
+			let uname=localStorage.getItem('ms_username').toString();
+			return uname.split('@')[0]||'账号'
 		}
 		
 		// ...mapGetters(['ischangeTools'])
 		// ...mapGetters({
 		// 	isShow:'ischangeTools'
 		// })
-	},
-	methods:{
-		showTools(){
-			this.$store.dispatch('changetools')
-		},
-		signout(){
-			this.$store.dispatch('changetools')
-			localStorage.removeItem('ms_username')
-		}
 	}
 
 }

@@ -31,6 +31,9 @@ export default {
 	[type.CANCELLOGIN](state,obj){
 		obj.showsignin=!obj.showsignin;
 	},
+	[type.SIGNOUT](state,obj){
+		obj.loged=!obj.loged;
+	},
 	[type.HADCHANGELOG](state,obj){
 		obj.loged=!obj.loged
 		if(obj.loged){

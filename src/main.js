@@ -4,11 +4,13 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store/index'
+import VueCookie from 'vue-cookie'
 import $ from 'jquery'
 import '../static/bootstrap/css/bootstrap.min.css'
 import '../static/bootstrap/js/bootstrap.min.js'
 import '../static/bootstrap/fonts/glyphicons-halflings-regular.eot'
 // require('bootstrap')
+Vue.use(VueCookie)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
@@ -21,18 +23,21 @@ new Vue({
   created(){
   	this.checkSignin()
   },
+  watch:{
+  	"$router":'checkSignin'
+  },
   methods:{
   	checkSignin(){
-  		if(!this.getCookie('session')){
-  			this.$router.push('/login')
+  		if(!this.$cookie.get('session')){
+  			this.$router.push('/')
   		}else{
-  			this.$router.push()
+  			this.$router.push('/')
   		}
   	}
   },
 
 })
-//在全局注册设置Cookie,方便调用
+/*//在全局注册设置Cookie,方便调用
 Vue.prototype.setCookie = (c_name, value, expiredays) => {
   var exdate = new Date();　　　　
   exdate.setDate(exdate.getDate() + expiredays);　　　　
@@ -56,4 +61,4 @@ Vue.prototype.delCookie =(name) => {
     var cval = getCookie(name);
     if (cval != null)
       document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString();
-}
+}*/

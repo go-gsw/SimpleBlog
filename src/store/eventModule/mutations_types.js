@@ -11,4 +11,5 @@ export const CHANGELIKE = 'CHANGELIKE';
 export const INCLIKES ='INCLIKES';
 export const CHANGELOG ='CHANGELOG';
 export const CANCELLOGIN ='CANCELLOGIN';
+export const SIGNOUT ='SIGNOUT';
 export const HADCHANGELOG ='HADCHANGELOG';
