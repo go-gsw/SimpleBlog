@@ -44,6 +44,7 @@ export default {
 		}
 	},
 	[type.SAVEUSERINFO](state,obj,obj1){
-		obj.userInfo=obj1.item.newuserinfo
+		console.log(obj1)
+		obj.userInfo=obj1
 	}
 }

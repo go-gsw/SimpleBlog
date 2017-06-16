@@ -9,8 +9,8 @@ export default {
 	ishadlogin({commit,rootState}){commit('CHANGELOG',rootState)},
 	cancellogin({commit,rootState}){commit('CANCELLOGIN',rootState)},
 	Signout({commit,rootState}){commit('SIGNOUT',rootState)},
-	hadlogin({commit,rootState}){commit('HADCHANGELOG',rootState)}
-	saveUserInfo:({commit,rootState},param)=>commit('SAVEUSERINFO',rootState,{item:newuserinfo})
+	hadlogin({commit,rootState}){commit('HADCHANGELOG',rootState)},
+	saveUserInfo:({commit,rootState},param)=>commit('SAVEUSERINFO',rootState,param)
 }
 
 

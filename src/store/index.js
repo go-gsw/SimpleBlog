@@ -14,10 +14,10 @@ export default new Vuex.Store({
 		loged:false,
 		domain:'http://baidu.com',
 		userInfo:{
-			name:"",
+			name:"sasas",
 			age:"",
 			male:"",
-			icon:""
+			icon:"../static/img/user1.jpg"
 		}
 	}
 	// state:{

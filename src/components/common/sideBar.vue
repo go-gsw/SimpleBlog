@@ -2,9 +2,10 @@
 	<div class="event-tools" :class="isShow">
 		<!-- <span class="glyphicon glyphicon-align-justify" @click="showTools"></span> -->
 		<div class="userImg">
-			<img :src="userImg" alt="头像">
+			<img id="userimg" style="width:100px;height:100px;border-radius:50%" :src="userImg" alt="头像">
 		</div>
 		<div class="h2" style="text-overflow: ellipsis;">{{Name}}</div>
+		<div class="h3" style="text-overflow: ellipsis;">{{username}}</div>
 		<!-- <span>{{userInfo.name}}</span> -->
 		<div class="signout" @click="signout">Sign out</div>
 	</div>
@@ -36,6 +37,7 @@ export default {
 			axios.get('/static/resource/user.json').then((res)=>{
 				if(res.data.code==0){
 					console.log(res)
+					console.log(res.data.userList[0])
 					this.$store.dispatch('saveUserInfo',res.data.userList[0])
 				}
 					
@@ -68,6 +70,9 @@ export default {
 			// return localStorage.getItem('ms_username')||'账号'
 			let uname=localStorage.getItem('ms_username').toString();
 			return uname.split('@')[0]||'账号'
+		},
+		username(){
+			return this.$store.state.userInfo.name
 		},
 		userImg(){
 			return this.$store.state.userInfo.icon
