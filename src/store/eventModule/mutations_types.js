@@ -13,3 +13,4 @@ export const CHANGELOG ='CHANGELOG';
 export const CANCELLOGIN ='CANCELLOGIN';
 export const SIGNOUT ='SIGNOUT';
 export const HADCHANGELOG ='HADCHANGELOG';
+export const SAVEUSERINFO ='SAVEUSERINFO';

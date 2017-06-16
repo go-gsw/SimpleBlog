@@ -43,8 +43,9 @@
             }
         });*/
         // this.$cookie.set('session','SignInfo',{expires:1,path:'/',domain:'baidu.com',secure:true})
-        let SignInfo=this.logform.useremail
-        this.$cookie.set('session','SignInfo',{expires:1})
+        let SignInfoNmae=this.logform.useremail
+        let SignInfoPassword=this.logform.userpassword
+        this.$cookie.set('session','name=SignInfoNmae;password=SignInfoPassword',{expires:1})
         localStorage.setItem('ms_username',this.logform.useremail);
       }
     },

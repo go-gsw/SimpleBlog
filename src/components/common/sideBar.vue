@@ -2,7 +2,7 @@
 	<div class="event-tools" :class="isShow">
 		<!-- <span class="glyphicon glyphicon-align-justify" @click="showTools"></span> -->
 		<div class="userImg">
-			
+			<img :src="userImg" alt="头像">
 		</div>
 		<div class="h2" style="text-overflow: ellipsis;">{{Name}}</div>
 		<!-- <span>{{userInfo.name}}</span> -->
@@ -24,15 +24,21 @@ export default {
 	},
 	methods:{
 		getUserInfo(){
+			/*//模拟请求的数据
 			this.userInfo={
 				name:"gsw",
 				age:"21",
 				male:"male",
 				icon:""
-			};
-			axios.get('',{'params':this.userInfo}).then((res)=>{
-
-				
+			};*/
+			//实际请求服务端数据
+			//模拟get('',{'params':this.userInfo})
+			axios.get('/static/resource/user.json').then((res)=>{
+				if(res.data.code==0){
+					console.log(res)
+					this.$store.dispatch('saveUserInfo',res.data.userList[0])
+				}
+					
 			}).catch(err=>{
 				console.log(err)
 			})
@@ -54,16 +60,18 @@ export default {
 				'show-out': this.$store.getters.ischangeTools
 			}
 		},
-		Name(){
-			// return localStorage.getItem('ms_username')||'账号'
-			let uname=localStorage.getItem('ms_username').toString();
-			return uname.split('@')[0]||'账号'
-		}
-		
 		// ...mapGetters(['ischangeTools'])
 		// ...mapGetters({
 		// 	isShow:'ischangeTools'
 		// })
+		Name(){
+			// return localStorage.getItem('ms_username')||'账号'
+			let uname=localStorage.getItem('ms_username').toString();
+			return uname.split('@')[0]||'账号'
+		},
+		userImg(){
+			return this.$store.state.userInfo.icon
+		}		
 	}
 
 }

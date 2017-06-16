@@ -42,5 +42,8 @@ export default {
 		}else{
 			obj.loged=!obj.loged
 		}
+	},
+	[type.SAVEUSERINFO](state,obj,obj1){
+		obj.userInfo=obj1.item.newuserinfo
 	}
 }
