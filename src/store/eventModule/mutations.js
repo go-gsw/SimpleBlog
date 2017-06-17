@@ -43,8 +43,9 @@ export default {
 			obj.loged=!obj.loged
 		}
 	},
-	[type.SAVEUSERINFO](state,obj,obj1){
-		console.log(obj1)
-		obj.userInfo=obj1
+	[type.SAVEUSERINFO](state,obj){
+		// console.log(obj)
+		// console.log(obj.param)
+		obj.rootState.userInfo=obj.param
 	}
 }

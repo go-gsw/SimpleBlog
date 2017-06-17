@@ -5,13 +5,13 @@
 		"name":"gsw",
 		"age":"21",
 		"male":"male",
-		"icon":"../img/user1.jpg"
+		"icon":"../../static/img/user1.jpg"
 		},
 		{
 		"name":"user",
 		"age":"21",
 		"male":"female",
-		"icon":"../img/user2.jpg"
+		"icon":"../../static/img/user2.jpg"
 		}]
 
 }
