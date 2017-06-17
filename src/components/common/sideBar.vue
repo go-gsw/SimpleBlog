@@ -36,7 +36,6 @@ export default {
 			//模拟get('',{'params':this.userInfo})
 			axios.get('/static/resource/user.json').then((res)=>{
 				if(res.data.code==0){
-					// console.log(res)
 					// console.log(res.data.userList[0])
 					try{
 						this.$store.dispatch('saveUserInfo',res.data.userList[0])
