@@ -44,16 +44,21 @@ import axios from 'axios'
                 return false;
             }
         });*/
+
+        axios.get('/static/resource/user.json').then((res)=>{
+        
+          this.$store.dispatch('saveUserInfo',res.data.userList)
+        }).catch(err=>{
+          console.log(err)
+        })
         console.log(SignInfoNmae)
         if(SignInfoNmae!=''&&SignInfoPassword!=''){
-          axios.post('/static/resource/user.json',{param:this.logform}).then((res)=>{
-            console.log(res)
-            if(SignInfoNmae=='gsw'){
-              this.$store.state.whichuser=0
-            }else{
-              this.$store.state.whichuser=0
-            }
-          })
+          // axios.post('/static/resource/user.json',{param:this.logform}).then((res)=>{
+            // console.log(res)
+            
+            console.log(this.$store.state.isgsw)
+            this.$store.dispatch('signInType',this.logform.useremail);
+          // })
         }
         // this.$cookie.set('session','SignInfo',{expires:1,path:'/',domain:'baidu.com',secure:true})
         this.$cookie.set('session','name=SignInfoNmae;password=SignInfoPassword',{expires:1})

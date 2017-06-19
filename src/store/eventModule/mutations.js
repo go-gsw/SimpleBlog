@@ -45,7 +45,19 @@ export default {
 	},
 	[type.SAVEUSERINFO](state,obj){
 		// console.log(obj)
-		// console.log(obj.param)
-		obj.rootState.userInfo=obj.param
+		if(obj.rootState.isgsw){
+			obj.rootState.userInfo=obj.param[1]
+			console.log(obj.rootState.userInfo)
+		}else{
+			obj.rootState.userInfo=obj.param[2]
+		}
+	},
+	[type.CHANGESIGNINTYPE](state,obj){
+		let needyanzhen=obj.param.toString()
+		if(needyanzhen=='1'){
+		  obj.rootState.isgsw=!obj.rootState.isgsw;
+		}else{
+		  obj.rootState.isgsw=obj.rootState.isgsw
+		}
 	}
 }

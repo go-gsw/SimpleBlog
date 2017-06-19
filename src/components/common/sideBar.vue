@@ -4,7 +4,7 @@
 		<div class="userImg">
 			<img id="userimg" style="width:100px;height:100px;border-radius:50%" :src="userImg" alt="头像">
 		</div>
-		<div class="h2" style="text-overflow: ellipsis;">{{Name}}</div>
+		<!-- <div class="h2" style="text-overflow: ellipsis;">{{Name}}</div> -->
 		<div class="h3" style="text-overflow: ellipsis;">{{username}}</div>
 		<!-- <span>{{userInfo.name}}</span> -->
 		<div class="signout" @click="signout">Sign out</div>
@@ -43,6 +43,10 @@ export default {
 	},
 	methods:{
 		getUserInfo(){
+			// return new Promise((resolve,reject)=>{
+
+			// })
+
 			/*//模拟请求的数据
 			this.userInfo={
 				name:"gsw",
@@ -63,11 +67,13 @@ export default {
 				}else{
 					this.$store.dispatch('saveUserInfo',res.data.userList[1])
 				}*/
-				if(this.$store.state.whichuser==1){
+
+				/*if(this.$store.state.whichuser==1){
 					this.$store.dispatch('saveUserInfo',res.data.userList[2])
 				}else{
 					this.$store.dispatch('saveUserInfo',res.data.userList[1])
-				}
+				}*/
+				this.$store.dispatch('saveUserInfo',res.data.userList)
 			}).catch(err=>{
 				console.log(err)
 			})
@@ -79,6 +85,13 @@ export default {
 			this.$store.dispatch('changetools')
 			this.$store.dispatch('Signout')
 			localStorage.removeItem('ms_username')
+			this.$store.state.whichuser=1
+			this.$store.state.userInfo={
+				name:"",
+				age:"",
+				male:"",
+				icon:""
+			}
 		}
 	},
 	computed:{
@@ -105,7 +118,7 @@ export default {
 			return this.$store.state.userInfo.icon
 		}		
 	},
-	watch(){
+	watch:{
 
 	}
 
