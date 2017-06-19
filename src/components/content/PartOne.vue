@@ -95,7 +95,11 @@ export default {
       this.$store.dispatch('incLikes')
     },
     showsignin(){
-      this.$store.dispatch('ishadlogin')
+      if(this.$store.state.loged){
+        return false
+      }else{
+        this.$store.dispatch('ishadlogin')
+      }
     }
   },
   computed:{

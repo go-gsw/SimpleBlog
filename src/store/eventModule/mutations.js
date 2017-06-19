@@ -21,7 +21,7 @@ export default {
 	},
 	[type.CHANGELOG](state,obj){
 		// obj.showsignin=!obj.showsignin;
-		if(obj.showsignin){
+		if(obj.showsignin&&obj.loged){
 			obj.showsignin
 			obj.loged=false
 		}else{
@@ -47,14 +47,13 @@ export default {
 		// console.log(obj)
 		if(obj.rootState.isgsw){
 			obj.rootState.userInfo=obj.param[1]
-			console.log(obj.rootState.userInfo)
 		}else{
 			obj.rootState.userInfo=obj.param[2]
 		}
 	},
 	[type.CHANGESIGNINTYPE](state,obj){
 		let needyanzhen=obj.param.toString()
-		if(needyanzhen=='1'){
+		if(needyanzhen=='gsw'){
 		  obj.rootState.isgsw=!obj.rootState.isgsw;
 		}else{
 		  obj.rootState.isgsw=obj.rootState.isgsw

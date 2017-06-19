@@ -11,12 +11,12 @@ export default {
 	Signout({commit,rootState}){commit('SIGNOUT',rootState)},
 	hadlogin({commit,rootState}){commit('HADCHANGELOG',rootState)},
 	signInType({commit,rootState},param){commit('CHANGESIGNINTYPE',{rootState,param})},
-	// saveUserInfo:({commit,rootState},param)=>commit('SAVEUSERINFO',{rootState,param})
-	saveUserInfo({dispatch,commit,rootState},param){
-		return dispatch('signInType',{rootState,param}).then((res)=>{
-			commit('SAVEUSERINFO',{rootState,param})
-		})
-	}
+	saveUserInfo:({commit,rootState},param)=>commit('SAVEUSERINFO',{rootState,param})
+	// saveUserInfo({dispatch,commit,rootState},param){
+	// 	return dispatch('signInType',{rootState,param}).then((res)=>{
+	// 		commit('SAVEUSERINFO',{rootState,param})
+	// 	})
+	// }
 }
 
 

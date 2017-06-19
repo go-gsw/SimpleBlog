@@ -4,7 +4,7 @@
         <form class="form-signin" ref="logform" :model="logform">
           <h2 class="form-signin-heading">master or visitor </br><small>sign in for this part</small></h2>
           <label for="inputEmail" class="sr-only">Email address</label>
-          <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" v-model="logform.useremail">
+          <input type="email" id="inputEmail" class="form-control" placeholder="输入gsw是管理员" required="" autofocus="" v-model="logform.useremail">
           <label for="inputPassword" class="sr-only">Password</label>
           <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" v-model="logform.userpassword" @keyup.enter="submitForm('logform')">
           <div class="checkbox">

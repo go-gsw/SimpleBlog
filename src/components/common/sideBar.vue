@@ -85,7 +85,7 @@ export default {
 			this.$store.dispatch('changetools')
 			this.$store.dispatch('Signout')
 			localStorage.removeItem('ms_username')
-			this.$store.state.whichuser=1
+			this.$store.state.isgsw=false
 			this.$store.state.userInfo={
 				name:"",
 				age:"",

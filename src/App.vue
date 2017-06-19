@@ -53,7 +53,11 @@ export default {
   computed:mapState({
     showsign(state){
         // return this.$store.getters.getshowsign
-        return this.$store.state.showsignin
+        if(this.$store.state.loged){
+          return this.$store.state.showsignin
+        }else{
+          return !this.$store.state.showsignin
+        }
         // return  true
     },
 
