@@ -13,6 +13,7 @@ export default new Vuex.Store({
 		showsignin:false,
 		loged:false,
 		domain:'http://baidu.com',
+		whichuser:1,
 		userInfo:{
 			name:"",
 			age:"",

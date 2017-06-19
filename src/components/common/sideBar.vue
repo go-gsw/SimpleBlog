@@ -14,6 +14,24 @@
 <script>
 import axios from 'axios'
 import {mapGetters} from 'vuex'
+/*import Mock from 'mockjs'
+//拦截Ajax请求
+Mock.mock('/static/resource/user.json',{
+	"code":0,
+	"userList":[
+		{
+		"name":"gsw",
+		"age":"21",
+		"male":"male",
+		"icon":"../../static/img/user1.jpg"
+		},
+		{
+		"name":"user",
+		"age":"21",
+		"male":"female",
+		"icon":"../../static/img/user2.jpg"
+		}]
+})*/
 export default {
 	data(){
 		return {
@@ -35,13 +53,18 @@ export default {
 			//实际请求服务端数据
 			//模拟get('',{'params':this.userInfo})
 			axios.get('/static/resource/user.json').then((res)=>{
-				if(res.data.code==0){
+				/*if(res.data.code==0){
 					// console.log(res.data.userList[0])
 					try{
 						this.$store.dispatch('saveUserInfo',res.data.userList[0])
 					}catch(err){
 						alert(err)
 					}
+				}else{
+					this.$store.dispatch('saveUserInfo',res.data.userList[1])
+				}*/
+				if(this.$store.state.whichuser==1){
+					this.$store.dispatch('saveUserInfo',res.data.userList[2])
 				}else{
 					this.$store.dispatch('saveUserInfo',res.data.userList[1])
 				}
@@ -81,6 +104,9 @@ export default {
 		userImg(){
 			return this.$store.state.userInfo.icon
 		}		
+	},
+	watch(){
+
 	}
 
 }

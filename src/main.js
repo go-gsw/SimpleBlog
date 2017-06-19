@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import store from './store/index'
 import VueCookie from 'vue-cookie'
+import Mock from 'mockjs'
 import $ from 'jquery'
 import '../static/bootstrap/css/bootstrap.min.css'
 import '../static/bootstrap/js/bootstrap.min.js'
@@ -36,6 +37,28 @@ new Vue({
   	}
   },
 
+})
+Mock.mock('/static/resource/user.json',{
+	"code":0,
+	"userList":[
+		{
+			"name":"gsw",
+			"age":"21",
+			"male":"male",
+			"icon":"../../static/img/user1.jpg"
+		},
+		{
+			"name":"user",
+			"age":"21",
+			"male":"female",
+			"icon":"../../static/img/user2.jpg"
+		},
+		{
+			"name":"normal",
+			"age":"xx",
+			"male":"male",
+			"icon":"../../static/img/usernormal.jpg"
+		}]
 })
 /*//在全局注册设置Cookie,方便调用
 Vue.prototype.setCookie = (c_name, value, expiredays) => {

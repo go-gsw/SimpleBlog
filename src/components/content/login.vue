@@ -17,6 +17,7 @@
   </div>
 </template>
 <script>
+import axios from 'axios'
   export default{
     data(){
       return{
@@ -30,10 +31,11 @@
       submitForm(logform){
         this.$store.dispatch('ishadlogin');
         this.$store.dispatch('hadlogin');
-        // return false
         // const self = this;
-        /*console.log(this.logform)
-        this.$ref.logform.validate((valid) => {
+        // console.log(this.logform)
+        let SignInfoNmae=this.logform.useremail
+        let SignInfoPassword=this.logform.userpassword
+        /*this.$ref.logform.validate((valid) => {
             if (valid) {
                 localStorage.setItem('ms_username',this.logform.useremail);
                 // this.$router.push('/PartTwo');
@@ -42,11 +44,21 @@
                 return false;
             }
         });*/
+        console.log(SignInfoNmae)
+        if(SignInfoNmae!=''&&SignInfoPassword!=''){
+          axios.post('/static/resource/user.json',{param:this.logform}).then((res)=>{
+            console.log(res)
+            if(SignInfoNmae=='gsw'){
+              this.$store.state.whichuser=0
+            }else{
+              this.$store.state.whichuser=0
+            }
+          })
+        }
         // this.$cookie.set('session','SignInfo',{expires:1,path:'/',domain:'baidu.com',secure:true})
-        let SignInfoNmae=this.logform.useremail
-        let SignInfoPassword=this.logform.userpassword
         this.$cookie.set('session','name=SignInfoNmae;password=SignInfoPassword',{expires:1})
         localStorage.setItem('ms_username',this.logform.useremail);
+        return false
       }
     },
   }
